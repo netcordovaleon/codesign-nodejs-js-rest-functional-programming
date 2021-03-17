@@ -1,4 +1,4 @@
-const helperConstant  = {
+const messages  = {
     responseType: {
         success: 'Success',
         warning: 'Warning',
@@ -12,4 +12,4 @@ const helperConstant  = {
 
 };
 
-module.exports = helperConstant;
+module.exports = messages;
