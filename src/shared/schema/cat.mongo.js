@@ -2,10 +2,13 @@ import { Schema, model } from 'mongoose';
 
 const catSchema = new Schema({
 	name: {
-		type: String
+		type: Schema.Types.String
 	},
 	color: {
-		type: String
+		type: Schema.Types.String
+	},
+	createdAt: {
+		type: Schema.Types.Date
 	}
 });
 
