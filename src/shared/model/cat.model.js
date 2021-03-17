@@ -1,7 +1,10 @@
-const CatModel = data => {
-	// eslint-disable-next-line no-underscore-dangle
-	this.id = data._id;
-	this.name = data.name;
-};
+export default class CatModel {
+	id;
+	name;
 
-module.exports = CatModel;
+	constructor(data) {
+		// eslint-disable-next-line no-underscore-dangle
+		this.id = data._id;
+		this.name = data.name;
+	}
+}

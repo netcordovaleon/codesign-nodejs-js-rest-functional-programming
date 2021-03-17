@@ -1,11 +1,11 @@
-const cors = require('cors');
-const express = require('express');
-const http = require('http');
-const morgan = require('morgan');
+import cors from 'cors';
+import express from 'express';
+import http from 'http';
+import morgan from 'morgan';
 
-const { routes } = require('./context/routes');
-const { PORT } = require('./settings/config');
-const { mongoConnect } = require('./settings/mongoose.connect');
+import { routes } from './context/routes';
+import { PORT } from './settings/config';
+import { mongoConnect } from './settings/mongoose.connect';
 
 const app = express();
 
@@ -15,7 +15,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan('dev'));
+
 const server = http.createServer(app);
+
 server.listen(PORT, () => {
 	mongoConnect();
 	console.log(`Server listening on port: ${PORT}`);

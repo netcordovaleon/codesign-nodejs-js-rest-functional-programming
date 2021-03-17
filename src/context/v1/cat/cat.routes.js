@@ -1,12 +1,11 @@
-const { Router } = require('express');
-const catList = require('./infrastructure/catListApi');
+import { Router } from 'express';
 
-const routes = () => {
+import * as catList from './infrastructure/catListApi';
+
+export const routes = () => {
 	const router = Router();
 
 	router.route('/').get(catList.handler);
 
 	return router;
 };
-
-module.exports = { routes };

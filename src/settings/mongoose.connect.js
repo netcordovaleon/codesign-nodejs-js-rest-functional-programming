@@ -1,7 +1,8 @@
-const mongoose = require('mongoose');
-const { DBMONGOUri } = require('./config');
+import mongoose from 'mongoose';
 
-function mongoConnect() {
+import { DBMONGOUri } from './config';
+
+export const mongoConnect = () => {
 	mongoose.Promise = global.Promise;
 
 	return mongoose
@@ -13,8 +14,4 @@ function mongoConnect() {
 		})
 		.then(() => console.log(`Succeeded connected to MongoDB`))
 		.catch(err => console.log(`ERROR connecting to MongoDB.`, err));
-}
-
-module.exports = {
-	mongoConnect
 };

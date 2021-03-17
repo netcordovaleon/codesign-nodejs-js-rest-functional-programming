@@ -1,5 +1,3 @@
-const catList = (catListIO) => {
+export const catList = (catListIO) => {
 		return catListIO();
 }
-
-module.exports = catList;

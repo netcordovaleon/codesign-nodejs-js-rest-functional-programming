@@ -1,13 +1,11 @@
-const { Router } = require('express');
+import { Router } from 'express';
 
-const catRoutes = require('./cat/cat.routes');
+import * as catRoutes from './cat/cat.routes';
 
-const routes = () => {
+export const routes = () => {
 	const router = Router();
 
-	router.use('/cat', catRoutes.routes())
+	router.use('/cat', catRoutes.routes());
 
 	return router;
 };
-
-module.exports = { routes };
