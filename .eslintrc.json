@@ -1,0 +1,29 @@
+{
+	"parser": "babel-eslint",
+	"extends": [
+		"eslint:recommended",
+		"airbnb-base",
+		"prettier"
+	],
+	"plugins": ["prettier"],
+	"env": {
+		"browser": false,
+		"es6": false
+	},
+	"globals": {
+		"Atomics": "readonly",
+		"SharedArrayBuffer": "readonly"
+	},
+	"parserOptions": {
+		"ecmaVersion": 2018
+	},
+	"rules": {
+		"no-console": "off",
+		"consistent-return": "off",
+		"newline-before-return": "error",
+		"no-plusplus": "off",
+    "import/prefer-default-export": "off",
+    "lines-between-class-members": "off",
+    "no-throw-literal": "off"
+	}
+}
