@@ -1,2 +1,0 @@
-//process.env.PORT = process.env.PORT || 3000;
-//process.env.URLDB = process.env.URLDB || 'mongodb+srv://m001-student:m001-mongodb-basics@cordovacluster.fwjkv.mongodb.net/codesign?retryWrites=true&w=majority';
